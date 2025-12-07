@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" thread-count="5" parallel="tests">
 
+ <listeners>
+<listener class-name="Utilities.ExtentReportManager"></listener>
+</listeners>
+
   <test name="chomeTest">
   
     <parameter name="os" value="windows"/>
@@ -28,7 +32,7 @@
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="Testcases.TC01_LoginTest"/>
-       <!-- <class name="Testcases.TC01_AccountRegistrationTest"/> -->
+      <class name="Testcases.TC01_AccountRegistrationTest"/>
       <!-- <class name="Testcases.TC03_LoginDDT"/>-->
     </classes>
   </test> <!-- Test -->
